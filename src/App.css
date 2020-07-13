@@ -1,32 +1,73 @@
-/*전체 컨테이너*/
-.container{
-  width:100%; /*이게 홈 백그라운드 크기*/
-  min-width:1920px;
-  height:980px;
-  overflow: hidden;
-}
-
 html,body{
   padding:0;
   margin:0;
+  font-size:16px;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
-/*로고배경*/
-.markArea{
-  position: relative;
-  background: #DAE2F8;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  width:100%;
-  height:100%;
-  overflow: hidden;
+.mainContainer{
+  width:1000px;
+  margin: 0 auto;
+  padding-top: 40vh;
+}
+
+
+/*헤더*/
+.header{
+  position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 44px;
+	padding: 0 1rem;/*모바일기기에 맞춰 양 옆 패딩줌*/}
+
+a{
+  color:black;
+  text-decoration: none;
+}
+
+.menuContainer{
+  position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 44px;
+  padding: 0 1rem;/*모바일기기에 맞춰 양 옆 패딩줌*/
+}
+
+.menu{
+  display: flex;/*중요!!*/
+	align-items: center;
+	max-width: 1000px;/*최대 메뉴 폭*/
+	height: 100%;/*부모만큼(44px)만큼 높이 폭 넓어져서 세로방향으로도 가운데 정렬*/
+  margin: 0 auto;/*센터정렬*/
+  justify-content: space-between;/*자동으로 일정한 간격으로 정렬*/
+}
+
+/*footer*/
+footer{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:3rem;
+  background-color: whitesmoke;
 }
 
 /*로고 지정*/
+.imgContainer{
+  width:100%;
+  margin:0 auto;
+  height:450px;
+}
+
 .frontMark {
-  padding-top: 350px;
-  width:900px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:800px;
   margin:0 auto;
   animation: fadein 3s;
   -moz-animation: fadein 3s; /* Firefox */
@@ -78,8 +119,8 @@ a span {
   width: 30px;
   height: 30px;
   margin-left: -12px;
-  border-left: 2px solid white;
-  border-bottom: 2px solid white;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb 1.5s infinite;
@@ -111,4 +152,39 @@ a span {
     transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
   }
+}
+
+/*메인화면 스크롤영역1*/
+.introduce{
+  position: relative;
+	padding-top: 50vh;
+}
+
+.phrase, .activity, .end {
+	display: flex;/*얘랑 align-tems:center;쓰면 수직방향 정렬을 이걸로 쓰면 편함*/
+	align-items: center;/*수직방향 정렬*/
+	justify-content: center;/*가로방향 정렬*/
+	top: 35vh;/**/
+	margin: 5px 0;
+	height: 500px;/*현재 폰트사이즈의 3배 높이*/
+	font-size: 2.5rem;
+}
+.phrase, .activity, .end p {
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.5;/*문단p의 행간 줄임*/
+}
+
+/*스크롤영역4*/
+.description {
+	max-width: 1000px;/*보통 스크롤영역의 텍스트 영역을 메뉴처럼 1000px로 맞춰줌*/
+	margin: 0 auto;
+	padding: 0 1rem;/*description영역 양옆 여백*/
+  font-size: 1.2rem;
+  padding-bottom: 300px;
+}
+.description strong {
+	margin-right: 0.2em;
+	font-size: 3rem;
+	color: rgb(29, 29, 31);
 }
