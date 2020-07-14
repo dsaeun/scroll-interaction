@@ -4,7 +4,7 @@ import '../App.css';
 
 let Main=()=> {
   return (
-    <div className="mainContainer">
+    <div>
       <section className="imgContainer">
         <img src={mark} className="frontMark"/>
           <a>
@@ -20,7 +20,7 @@ let Main=()=> {
         </div>
         <div className="phrase text-2">
           <p>
-          WMC는 We Make Creative의 약자입니다.
+          WMC는<br/>We Make Creative의 약자입니다.
           </p>
         </div>
         <div className="phrase text-3">
@@ -56,7 +56,7 @@ let Main=()=> {
         </div>
         <div className="end text-1">
           <p>
-          코딩과 프로그래밍을 열심히해봅시다~~
+          프로그래밍을 열심히해봅시다~~
           </p>
         </div>
       </section>
